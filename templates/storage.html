@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Main</title>
+    <style>
+        body {
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: rgb(243, 212, 12);
+        }
+
+        .center {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10vw;
+        }
+
+        .mainBox {
+            padding: 4vw;
+            background-color: rgb(243, 243, 243);
+            width:50vw;
+            border-radius: 1rem;
+            overflow: scroll;
+        }
+
+
+        button {
+            margin-left: 0.05rem;
+            border: 1px solid rgb(227, 227, 227);
+            border-radius: 0.5rem;
+            width: 50vw;
+            height: 1.8rem;
+            color: white;
+            font-size: 0.7rem;
+        }
+
+
+
+        input {
+            background-color: rgb(249, 249, 249);
+            border-radius: 0.3rem;
+            border: 1px solid rgb(227, 227, 227);
+            margin: 0.2rem;
+            height: 1.6rem;
+            width: 49vw;
+        }
+
+        .placeBox {
+            text-align: center;
+        }
+
+        .place {
+            float: left;
+            width: 23.5vw;
+            background-color: rgb(249, 249, 249);
+            border-radius: 0.3rem;
+            border: 1px solid rgb(227, 227, 227);
+            padding: 0.5rem;
+            margin-bottom: 0.5vw;
+        }
+
+        .place:nth-child(2n+1){
+            margin-right:0.5vw;
+        }
+
+        .name {
+            font-weight: 600;
+
+        }
+
+        .type, .user_rating, .comment {
+            font-weight: 500;
+            font-size: 0.9rem;
+            color:rgb(58, 58, 58);
+        }
+
+        span {
+            color:rgb(115, 115, 115);
+            font-size: 0.83rem;
+        }
+    </style>
+  
+</head>
+<body>
+    <div class="center">
+        <div class="mainBox">
+            <h2>📌 Place Storage</h2>
+            <div id="placeBox">
+                {% for r in result%}
+                    <div class="place">
+                        <div class="name">🤔 {{r[0]}} <span>{{r[2]}}</span></div>
+                        <div class="user_rating">⭐️ {{r[1]}}</div>
+                        <div class="comment">{{r[3]}}</div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

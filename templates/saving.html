@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Main</title>
+    <style>
+        body {
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: rgb(243, 212, 12);
+        }
+        
+        .center {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10vw;
+        }
+
+        label {
+            font-size: 0.9rem;
+        }
+        
+        .mainBox {
+            padding: 4vw;
+            background-color: rgb(243, 243, 243);
+            width:50vw;
+            border-radius: 1rem;
+            overflow: scroll;
+        }
+        
+        button {
+            margin-left: 0.05rem;
+            border: 1px solid rgb(227, 227, 227);
+            border-radius: 0.5rem;
+            width: 24.5vw;
+            height: 1.8rem;
+            color: white;
+            font-size: 0.7rem;
+        }
+
+        input, select {
+            background-color: rgb(249, 249, 249);
+            border-radius: 0.3rem;
+            border: 1px solid rgb(227, 227, 227);
+            margin: 0.2rem;
+            height: 1.6rem;
+            width: 48.5vw;
+        }
+
+        select {
+            height: 2rem;
+            width: 49vw;
+        }
+
+        textarea {
+            background-color: rgb(249, 249, 249);
+            border-radius: 0.3rem;
+            border: 1px solid rgb(227, 227, 227);
+            margin: 0.2rem;
+            height: 5vw;
+            width: 48.5vw;
+        }
+
+        .input {
+            margin-bottom: 1rem;
+        }
+
+        .input label {
+            font-weight: 500;
+            padding-left: 0.5rem;
+        }
+
+        .inputButton {
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <div class="mainBox">
+            <h2>📌 Save Place</h2>
+            <form method="POST">
+                <div class="input">
+                    <label for="url">URL</label><br>
+                    <input id="url" name="url" placeholder="">
+                </div>
+                <div class="input">
+                    <label for="user_rating">Rating</label><br>
+                    <select id="user_rating" name="user_rating">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5" selected>5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="input">
+                    <label for="comment">Comment</label><br>
+                    <textarea id="comment" name="comment" rows="2"></textarea>
+                </div>
+                <div class="inputButton">
+                    <button type="submit" style="background-color: rgb(230, 46, 46)";>Save</button>
+                    <button type="button" onclick="location.href='storage'" style="background-color: rgb(46, 95, 230);">Go storage</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
