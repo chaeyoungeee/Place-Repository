@@ -12,52 +12,59 @@
         background-color: rgb(243, 212, 12);
         }
 
-.loginBox {
-    margin: 0 auto;
-    background-color: rgb(243, 243, 243);
-    width: 10rem;
-    height: 8rem;
-    padding: 6rem 10rem 10rem;
-    border-radius: 1rem;
-    margin-top: 10rem;
-}
+        .center {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
 
-.inputBox {
-    position: relative;
-    left: -0.2rem;
-}
+        .loginBox {
+            background-color: rgb(243, 243, 243);
+            width: 10rem;
+            height: 8rem;
+            padding: 6rem 10rem 10rem;
+            border-radius: 1rem;
+        }
 
-button {
-    border: 1px solid rgb(227, 227, 227);
-    border-radius: 0.5rem;
-    width: 5rem;
-    height: 1.8rem;
-    color: white;
-    font-size: 0.7rem;
-}
+        .inputBox {
+            position: relative;
+            left: -0.2rem;
+        }
 
-form {
-    width: 20rem;
-    height: 6rem;
-}
+        button {
+            border: 1px solid rgb(227, 227, 227);
+            border-radius: 0.5rem;
+            width: 5rem;
+            height: 1.8rem;
+            color: white;
+            font-size: 0.7rem;
+        }
 
-input {
-    background-color: rgb(249, 249, 249);
-    border-radius: 0.3rem;
-    border: 1px solid rgb(227, 227, 227);
-    margin: 0.2rem;
-    height: 1.6rem;
-    width: 9.8rem;
-}
+        form {
+            width: 20rem;
+            height: 6rem;
+        }
 
-.inputButton {
-    margin-top: 1rem;
-}
+        input {
+            background-color: rgb(249, 249, 249);
+            border-radius: 0.3rem;
+            border: 1px solid rgb(227, 227, 227);
+            margin: 0.2rem;
+            height: 1.6rem;
+            width: 9.8rem;
+        }
+
+        .inputButton {
+            margin-top: 1rem;
+        }
     </style>
 </head>
 <body>
+    <div class="center">
     <div class="loginBox">
-        <h2>📌 Login Page</h2>
+        <h2>📌 Login</h2>
         <form action="/login" method="POST">
             <div class="inputBox">
                 <input id="id" type="text" name="id" placeholder="id">
@@ -72,6 +79,7 @@ input {
                 <button type="button" onclick="location.href='register'" style="background-color: rgb(46, 95, 230);">Sign up</button>
             </div>
         </form>
+    </div>
     </div>
 </body>
 </html>

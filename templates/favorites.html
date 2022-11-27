@@ -14,11 +14,11 @@
         }
 
         .center {
-            height:90vh;
             display: flex;
             flex-wrap: wrap;
             align-items: center;
             justify-content: center;
+            height: 90vh;
         }
 
         .mainBox {
@@ -31,15 +31,14 @@
 
 
         button {
-            margin-left: 0.05rem;
+            margin-top: 0.5rem;
             border: 1px solid rgb(227, 227, 227);
             border-radius: 0.5rem;
-            width: 50vw;
+            width: 100%;
             height: 1.8rem;
             color: white;
             font-size: 0.7rem;
         }
-
 
 
         input {
@@ -70,10 +69,9 @@
 
         .name {
             font-weight: 600;
-
         }
 
-        .type, .user_rating, .comment {
+        .location, .rating {
             font-weight: 500;
             font-size: 0.9rem;
             color:rgb(58, 58, 58);
@@ -83,6 +81,7 @@
             color:rgb(115, 115, 115);
             font-size: 0.83rem;
         }
+
         .go_menu {
             width: 1.5rem;
             background-color: transparent;
@@ -94,15 +93,16 @@
 </head>
 <body>
     <button class="go_menu" type="button" onclick="location.href='saving'">✏️</button>
+
     <div class="center">
         <div class="mainBox">
-            <h2>📌 Place Storage</h2>
+            <h2>📌 Favorites</h2>
             <div class="placeBox">
                 {% for r in result%}
                     <div class="place">
-                        <div class="name">🤔 {{r[0]}} <span>{{r[2]}}</span></div>
-                        <div class="user_rating">⭐️ {{r[1]}}</div>
-                        <div class="comment">{{r[3]}}</div>
+                        <div class="name">🤔 {{r['place_name']}} <span>{{r['type']}}</span></div>
+                        <div class="rating">⭐️ {{r['rating']}}</div>
+                        <div class="location">{{r['location']}}</div>
                     </div>
                 {% endfor %}
             </div>

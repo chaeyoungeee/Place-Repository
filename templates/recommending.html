@@ -18,7 +18,7 @@
             flex-wrap: wrap;
             align-items: center;
             justify-content: center;
-            margin-top: 10vw;
+            height:90vh;
         }
 
         .mainBox {
@@ -82,10 +82,17 @@
             color:rgb(115, 115, 115);
             font-size: 0.83rem;
         }
+        .go_menu {
+            width: 1.5rem;
+            background-color: transparent;
+            border: 0;
+            font-size: 1.5rem;
+            display: fixed;
+        }
     </style>
-  
 </head>
 <body>
+    <button class="go_menu" type="button" onclick="location.href='saving'">✏️</button>
     <div class="center">
         <div class="mainBox">
             <h2>📌 Place Storage</h2>
@@ -95,8 +102,10 @@
                         <div class="name">🤔 {{r['place_name']}} <span>{{r['type']}}</span></div>
                         <div class="rating">⭐️ {{r['rating']}}</div>
                         <div class="location">{{r['location']}}</div>
-
-                        <button type="submit" style="background-color: rgb(203, 203, 203)";>Favorites</button>
+                        <form method="POST" action="/recommend_f">
+                            <input id="place_name" type="hidden" name="place_name" value="<?={{r['place_name']}}?>">
+                            <button type="submit" style="background-color: rgb(203, 203, 203)";>Favorites</button>
+                        </form>
                     </div>
                 {% endfor %}
             </div>

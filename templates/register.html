@@ -7,19 +7,25 @@
     <link rel="stylesheet" href="./style.css">
     <title>Login</title>
     <style>
+        .center {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, sans-serif;
             background-color: rgb(243, 212, 12);
         }
         
         .loginBox {
-            margin: 0 auto;
             background-color: rgb(243, 243, 243);
             width: 10rem;
             height: 8rem;
-            padding: 5rem 10rem 10rem;
+            padding: 6rem 10rem 10rem;
             border-radius: 1rem;
-            margin-top: 10rem;
         }
         
         .inputBox {
@@ -56,6 +62,7 @@
     </style>
 </head>
 <body>
+    <div class=center>
     <div class="loginBox">
         <h2>📌 Sign up</h2>
         <form method="POST">
@@ -69,6 +76,7 @@
                 <button type="submit" style="background-color: rgb(46, 95, 230);">Sign up</button>
             </div>
         </form>
+    </div>
     </div>
 </body>
 </html>
