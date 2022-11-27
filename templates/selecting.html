@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +13,7 @@
             font-family: -apple-system, BlinkMacSystemFont, sans-serif;
             background-color: rgb(243, 212, 12);
         }
-
+        
         .center {
             display: flex;
             flex-wrap: wrap;
@@ -21,6 +22,10 @@
             margin-top: 10vw;
         }
 
+        label {
+            font-size: 0.9rem;
+        }
+        
         .mainBox {
             padding: 4vw;
             background-color: rgb(243, 243, 243);
@@ -29,76 +34,58 @@
             overflow: scroll;
         }
 
-
+        h2 {
+            margin-block-end: 0;
+        }
+        
         button {
             margin-left: 0.05rem;
+            margin-bottom: 0.3rem;
             border: 1px solid rgb(227, 227, 227);
             border-radius: 0.5rem;
-            width: 50vw;
+            width: 49.5vw;
             height: 1.8rem;
             color: white;
             font-size: 0.7rem;
         }
 
-
-
-        input {
+        input, select {
             background-color: rgb(249, 249, 249);
             border-radius: 0.3rem;
             border: 1px solid rgb(227, 227, 227);
             margin: 0.2rem;
             height: 1.6rem;
+            width: 48.5vw;
+        }
+
+        select {
+            height: 2rem;
             width: 49vw;
         }
 
-        .placeBox {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-between; 
-        }
-
-        .place {
-            padding: 20px;
-            box-sizing: border-box;
-            width: calc(99% / 2);
-            background-color: rgb(249, 249, 249);
-            border-radius: 0.3rem;
-            border: 1px solid rgb(227, 227, 227);
-            padding: 0.5rem;
-            margin-bottom: 1%;
-        }
-
-        .name {
-            font-weight: 600;
-
-        }
-
-        .type, .user_rating, .comment {
-            font-weight: 500;
-            font-size: 0.9rem;
-            color:rgb(58, 58, 58);
-        }
-
-        span {
-            color:rgb(115, 115, 115);
-            font-size: 0.83rem;
+        .inputButton {
+            margin-top: 1rem;
         }
     </style>
-  
 </head>
 <body>
     <div class="center">
         <div class="mainBox">
-            <h2>📌 Place Storage</h2>
-            <div class="placeBox">
-                {% for r in result%}
-                    <div class="place">
-                        <div class="name">🤔 {{r[0]}} <span>{{r[2]}}</span></div>
-                        <div class="user_rating">⭐️ {{r[1]}}</div>
-                        <div class="comment">{{r[3]}}</div>
-                    </div>
-                {% endfor %}
-            </div>
+            <h2>📌 Select Type</h2>
+            <form method="POST">
+                <div class="input">
+                    <label for="type"></label><br>
+                    <select id="type" name="type">
+                        <option value="전체보기">전체보기</option>
+                        {% for r in result%}
+                        <option value={{r['type']}}>{{r['type']}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="inputButton">
+                    <button type="submit" style="background-color: rgb(46, 95, 230)";>Select</button>
+                </div>
+            </form>
         </div>
     </div>
 </body>
