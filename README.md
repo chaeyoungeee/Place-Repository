@@ -1,6 +1,7 @@
 
-📌 Place-Repository
+📌 Place-Repository (장소 저장 )
 =============
+<img src="https://github.com/chaeyoungeee/Place-Repository/blob/main/img/icon.png" width="20%">
 
 ## ❗️Description
  **Place Repository**는 음식점 평가 웹페이지로 사용자가 자신이 가본 음식점을 평가하고 그 기록을 저장할 수 있는 웹 페이지입니다.<br>
