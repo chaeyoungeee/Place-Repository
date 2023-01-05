@@ -21,7 +21,7 @@ def login():
         user_id = id
         pw = request.form['password']
 
-        conn = pymysql.connect(host='localhost', user='root', password='pw_',
+        conn = pymysql.connect(host='localhost', user='root', password='Duck9962@@',
                                db='place_repository', charset='utf8',  # 한글처리 (charset = 'utf8')
                                autocommit=True,  # 결과 DB 반영 (Insert or update)
                                cursorclass=pymysql.cursors.DictCursor  # DB조회시 컬럼명을 동시에 보여줌
@@ -46,7 +46,7 @@ def register():
         id_ = request.form['id']
         pw_ = request.form['password']
 
-        conn = pymysql.connect(host='localhost', user='root', password='pw_',
+        conn = pymysql.connect(host='localhost', user='root', password='Duck9962@@',
                                db='place_repository', charset='utf8',  # 한글처리 (charset = 'utf8')
                                autocommit=True,  # 결과 DB 반영 (Insert or update)
                                cursorclass=pymysql.cursors.DictCursor  # DB조회시 컬럼명을 동시에 보여줌
@@ -70,7 +70,7 @@ def saving():
     if request.method == 'GET':
         return render_template('saving.html')
     else:
-        conn = pymysql.connect(host='localhost', user='root', password='pw_',
+        conn = pymysql.connect(host='localhost', user='root', password='Duck9962@@',
                                db='place_repository', charset='utf8',  # 한글처리 (charset = 'utf8')
                                autocommit=True,  # 결과 DB 반영 (Insert or update)
                                cursorclass=pymysql.cursors.DictCursor  # DB조회시 컬럼명을 동시에 보여줌
@@ -97,7 +97,7 @@ def saving():
         location = soup.find('span', {'class': 'IH7VW'}).text
 
         cur.execute("insert ignore into place values('%s', %f, '%s', '%s')"%(place_name, rating, location, type))
-        cur.execute("insert into place_comment values('%s', '%s', %f, '%s') on duplicate key update comment='%s'"%(user_id, place_name, user_rating, comment, comment))
+        cur.execute("insert into place_comment values('%s', '%s', %f, '%s') on duplicate key update user_rating=%f, comment='%s'"%(user_id, place_name, user_rating, comment, user_rating, comment))
 
         conn.commit()
         conn.close()
@@ -106,7 +106,7 @@ def saving():
 
 @app.route('/storage', methods=['GET'])
 def listing():
-    conn = pymysql.connect(host='localhost', user='root', password='pw_',
+    conn = pymysql.connect(host='localhost', user='root', password='Duck9962@@',
                            db='place_repository', charset='utf8',  # 한글처리 (charset = 'utf8')
                            autocommit=True,  # 결과 DB 반영 (Insert or update)
                            cursorclass=pymysql.cursors.DictCursor  # DB조회시 컬럼명을 동시에 보여줌
@@ -128,7 +128,7 @@ def listing():
 @app.route('/recommend', methods=['GET', 'POST'])
 def recommending():
     if request.method == 'GET':
-        conn = pymysql.connect(host='localhost', user='root', password='pw_',
+        conn = pymysql.connect(host='localhost', user='root', password='Duck9962@@',
                                db='place_repository', charset='utf8',
                                autocommit=True,
                                cursorclass=pymysql.cursors.DictCursor)
@@ -142,7 +142,7 @@ def recommending():
         return render_template('selecting.html', result=data)
     else:
         type = request.form['type']
-        conn = pymysql.connect(host='localhost', user='root', password='pw_',
+        conn = pymysql.connect(host='localhost', user='root', password='Duck9962@@',
                                db='place_repository', charset='utf8',  # 한글처리 (charset = 'utf8')
                                autocommit=True,  # 결과 DB 반영 (Insert or update)
                                cursorclass=pymysql.cursors.DictCursor  # DB조회시 컬럼명을 동시에 보여줌
@@ -172,7 +172,7 @@ def add_favorites():
         return render_template('recommending.html')
     else:
         place_name = (request.form['place_name'])[3:-2]
-        conn = pymysql.connect(host='localhost', user='root', password='pw_',
+        conn = pymysql.connect(host='localhost', user='root', password='Duck9962@@',
                             db='place_repository', charset='utf8',  # 한글처리 (charset = 'utf8')
                             autocommit=True,  # 결과 DB 반영 (Insert or update)
                             cursorclass=pymysql.cursors.DictCursor  # DB조회시 컬럼명을 동시에 보여줌
@@ -189,7 +189,7 @@ def add_favorites():
 @app.route('/favorites', methods=['GET'])
 def favorites():
 
-    conn = pymysql.connect(host='localhost', user='root', password='pw_',
+    conn = pymysql.connect(host='localhost', user='root', password='Duck9962@@',
                            db='place_repository', charset='utf8',  # 한글처리 (charset = 'utf8')
                            autocommit=True,  # 결과 DB 반영 (Insert or update)
                            cursorclass=pymysql.cursors.DictCursor  # DB조회시 컬럼명을 동시에 보여줌
@@ -211,5 +211,5 @@ def favorites():
 if __name__ == '__main__':
     app.secret_key = 'super secret key'
     app.config['SESSION_TYPE'] = 'filesystem'
-    app.run('0.0.0.0', port=4900, debug=True)
+    app.run('0.0.0.0', port=4740, debug=True)
 
