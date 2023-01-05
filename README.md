@@ -9,8 +9,8 @@
 구현하려고 한 주요 기능은 `(1) 로그인 및 가입 기능`, `(2) 음식점 링크를 입력하여 평가하고 코멘트를 달아 저장하는 기능`, `(3) 사용자가 저장한 음식점을 모아 보는 기능`, `(4) 사용자가 선택한 음식점 타입에 따라 평점 순으로 음식점을 추천하는 기능`, `(5) 추천 받은 음식점 즐겨찾기에 등록하는 기능`입니다.
 
 ## ❗️ERD
-<img src="https://github.com/chaeyoungeee/Place-Repository/blob/main/img/erd_1.png" width="90%">
-<img src="https://github.com/chaeyoungeee/Place-Repository/blob/main/img/erd_2.png" width="90%">
+<img src="https://github.com/chaeyoungeee/Place-Repository/blob/main/img/erd(1).png" width="90%">
+<img src="https://github.com/chaeyoungeee/Place-Repository/blob/main/img/erd(2).png" width="90%">
 
 ## ❗️Main Functions
 > 첫번째 기능은 회원 가입 기능입니다. <br>
