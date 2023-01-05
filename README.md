@@ -1,5 +1,5 @@
 
-📌 Place-Repository (장소 저장 )
+📌 Place-Repository (장소 저장 웹페이지)
 =============
 <img src="https://github.com/chaeyoungeee/Place-Repository/blob/main/img/icon.png" width="20%">
 
