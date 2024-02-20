@@ -13,6 +13,17 @@
 <img src="https://github.com/chaeyoungeee/Place-Repository/blob/main/img/erd(1).png" width="90%">
 <img src="https://github.com/chaeyoungeee/Place-Repository/blob/main/img/erd(2).png" width="90%">
 
+## ❗️Technology Stack
+> Frontend
+
+HTML, CSS, JS
+> Backend
+
+Python flask
+> DB
+
+MySQL
+
 ## ❗️Main Functions & Running
 > 첫번째 기능은 **회원 가입 기능**입니다. <br>
 > 사용자는 회원 가입을 하기 위해 아이디와 비밀번호를 입력해야 합니다. 입력한 정보는 user 테이블에 저장됩니다. 회원 가입 이후 로그인을 하여 나머지 기능들을 이용할 수 있습니다.
