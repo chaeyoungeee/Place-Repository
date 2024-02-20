@@ -9,20 +9,18 @@
  기존의 음식점을 평가하는 기능들은 대부분 평가가 5단계로만 가능해 상세한 평가가 어려운 단점이 있습니다. 이것을 개선하여 Place Repository에서는 0레벨부터 10레벨까지 11레벨로 장소에 대한 평가가 가능하고 그 장소에 대한 코멘트를 작성할 수 있습니다. 또한 기존에는 내가 평가한 장소에 대한 정보를 한 번에 모아 보기 힘든 점을 개선하여 내가 저장한 장소와 그 평가들을 한 번에 볼 수 있습니다.<br>
 구현한 주요 기능은 `(1) 로그인 및 가입 기능`, `(2) 음식점 링크를 입력하여 평가하고 코멘트를 달아 저장하는 기능`, `(3) 사용자가 저장한 음식점을 모아 보는 기능`, `(4) 사용자가 선택한 음식점 타입에 따라 평점 순으로 음식점을 추천하는 기능`, `(5) 추천 받은 음식점 즐겨찾기에 등록하는 기능`입니다.
 
+## ❗️Technology Stack
+- **Frontend**
+HTML, CSS, JS
+- **Backend**
+Python flask
+- **DB**
+MySQL
+
 ## ❗️ERD
 <img src="https://github.com/chaeyoungeee/Place-Repository/blob/main/img/erd(1).png" width="90%">
 <img src="https://github.com/chaeyoungeee/Place-Repository/blob/main/img/erd(2).png" width="90%">
 
-## ❗️Technology Stack
-> Frontend
-
-HTML, CSS, JS
-> Backend
-
-Python flask
-> DB
-
-MySQL
 
 ## ❗️Main Functions & Running
 > 첫번째 기능은 **회원 가입 기능**입니다. <br>
